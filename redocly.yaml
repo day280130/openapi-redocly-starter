@@ -1,0 +1,25 @@
+# See https://redocly.com/docs/cli/configuration/ for more information.
+apis:
+  sample@v1:
+    root: openapi/main.yaml
+extends:
+  - recommended
+rules:
+  no-server-example.com: off
+  tag-description: off
+  operation-summary: error
+  no-unresolved-refs: error
+  no-unused-components: error
+  operation-2xx-response: error
+  operation-operationId: error
+  operation-singular-tag: error
+  no-enum-type-mismatch: error
+  no-identical-paths: error
+  no-ambiguous-paths: error
+theme:
+  openapi:
+    htmlTemplate: ./docs/index.html
+    theme:
+      colors:
+        primary:
+          main: "#32329f"
